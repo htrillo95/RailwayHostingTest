@@ -7,7 +7,7 @@ function FooterComponent() {
   useEffect(() => {
     const fetchAttemptCount = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/quiz-api/questions/requestcount');
+        const response = await axios.get('https://railwayhostingtest-production.up.railway.app/quiz-api/questions/requestcount');
         const count = response.data;
         setAttemptCount(count.toString().padStart(3, '0'));
       } catch (error) {

@@ -61,7 +61,7 @@ function FeedbackPage() {
     formData.append('email', userEmail);
     formData.append('htmlContent', feedbackContent);
 
-    axios.post('http://localhost:8080/app/send-email', formData)
+    axios.post('https://railwayhostingtest-production.up.railway.app/app/send-email', formData)
       .then(() => {
         setEmailSent(true);
         setShowModal(false);

@@ -13,7 +13,7 @@ const ManageAdminProfileComponent = ({ username }) => {
     if (authenticated) {
       const fetchProfile = async () => {
         try {
-          const response = await axios.get(`http://localhost:8080/adminprofile/${username}`);
+          const response = await axios.get(`https://railwayhostingtest-production.up.railway.app/adminprofile/${username}`);
           const data = response.data;
           setProfile({
             name: data.name || "",
@@ -51,7 +51,7 @@ const ManageAdminProfileComponent = ({ username }) => {
         delete updatedProfile.password; // Remove password field if it is empty
       }
       //console.log("Updating profile with data: ", updatedProfile);
-      await axios.put(`http://localhost:8080/adminprofile/${username}`, updatedProfile);
+      await axios.put(`https://railwayhostingtest-production.up.railway.app/adminprofile/${username}`, updatedProfile);
       setMessage("Profile updated successfully");
       setMessageType("success"); // Set message type to success
     } catch (err) {

@@ -13,7 +13,7 @@ function CommentManagerComponent() {
 
   const fetchComments = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/comments/all");
+      const response = await axios.get("https://railwayhostingtest-production.up.railway.app/comments/all");
       setComments(response.data);
     } catch (error) {
       console.error("Error fetching comments:", error);
@@ -23,7 +23,7 @@ function CommentManagerComponent() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this comment?")) {
       try {
-        await axios.delete(`http://localhost:8080/comments/${id}`);
+        await axios.delete(`https://railwayhostingtest-production.up.railway.app/comments/${id}`);
         setComments((prevComments) =>
           prevComments.filter((comment) => comment.id !== id)
         );
@@ -48,7 +48,7 @@ function CommentManagerComponent() {
 
   const handleSave = async () => {
     try {
-      const response = await axios.put(`http://localhost:8080/comments/${editableComment.id}`, editableComment, {
+      const response = await axios.put(`https://railwayhostingtest-production.up.railway.app/comments/${editableComment.id}`, editableComment, {
         headers: {
           "Content-Type": "application/json",
         },

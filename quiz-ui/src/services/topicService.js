@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASEAPIURL = "http://localhost:8080";
+const BASEAPIURL = "https://railwayhostingtest-production.up.railway.app";
 
 export const getAllTopics = async () => {
   try {

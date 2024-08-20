@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosPublicInstance = axios.create({
-  baseURL: 'http://localhost:8080', // backend base URL
+  baseURL: 'https://railwayhostingtest-production.up.railway.app', // backend base URL
 });
 
 export default axiosPublicInstance;

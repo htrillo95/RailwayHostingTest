@@ -39,7 +39,7 @@ const BulkAddQuestionsComponent = () => {
           topicId: parseInt(question['topicId'], 10)
         }));
 
-        axios.post('http://localhost:8080/quiz-api/questions/bulk-upload', {
+        axios.post('https://railwayhostingtest-production.up.railway.app/quiz-api/questions/bulk-upload', {
           questions: questions
         })
         .then(response => {

@@ -14,7 +14,7 @@ function ContactPage() {
 
   const fetchApprovedComments = async () => {
     try {
-      const response = await fetch("http://localhost:8080/comments");
+      const response = await fetch("https://railwayhostingtest-production.up.railway.app/comments");
       const data = await response.json();
       setComments(data);
     } catch (error) {
@@ -41,7 +41,7 @@ function ContactPage() {
     const newComment = { content, authorName: name, email };
 
     try {
-      const response = await fetch("http://localhost:8080/comments", {
+      const response = await fetch("https://railwayhostingtest-production.up.railway.app/comments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

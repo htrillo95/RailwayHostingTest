@@ -10,7 +10,7 @@ import jakarta.mail.internet.MimeMessage;
 
 @RestController
 @RequestMapping("/app/send-email")
-@CrossOrigin(origins = {"http://localhost:3000", "https://zingy-elf-444a3a.netlify.app"})
+@CrossOrigin(origins = {"http://localhost:3000", "https://railway-hosting-test.vercel.app", "https://zingy-elf-444a3a.netlify.app"})
 public class EmailController {
 
     @Autowired
